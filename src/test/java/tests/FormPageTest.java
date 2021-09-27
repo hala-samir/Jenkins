@@ -8,7 +8,7 @@ public class FormPageTest extends TestBase {
 	HomePage homePg;
 	SimpleForm formPg;
 	
-	@Test
+//	@Test
 	public void fillFormSucessfully() {
 		homePg=new HomePage(driver);
 		homePg.closePopup();
