@@ -11,7 +11,7 @@ public class TestBase {
 	public static WebDriver driver;
 	@BeforeSuite
 	public void startDriver() {
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/drivers2/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/drivers3/chromedriver.exe");
 		driver= new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.navigate().to("https://www.seleniumeasy.com/test");

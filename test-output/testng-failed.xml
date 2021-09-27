@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [testSuit]" parallel="tests">
+  <test thread-count="2" name="Regression1(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="tests.FormPageTest">
+      <class name="tests.FillFormParallelTest">
         <methods>
-          <include name="startDriver"/>
+          <include name="setup"/>
           <include name="fillFormSucessfully"/>
         </methods>
-      </class> <!-- tests.FormPageTest -->
+      </class> <!-- tests.FillFormParallelTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Regression1(failed) -->
+  <test thread-count="2" name="Regression2(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="tests.FillFormParallelTest">
+        <methods>
+          <include name="setup"/>
+          <include name="fillFormSucessfully"/>
+        </methods>
+      </class> <!-- tests.FillFormParallelTest -->
+    </classes>
+  </test> <!-- Regression2(failed) -->
+</suite> <!-- Failed suite [testSuit] -->

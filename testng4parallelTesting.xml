@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="testSuit" parallel="tests" thread-count="2">
+	<test name="Regression1">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="tests.FillFormParallelTest" />
+		</classes>
+	</test>
+
+	<test name="Regression2">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="tests.FillFormParallelTest" />
+		</classes>
+	</test>
+</suite>
