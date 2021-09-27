@@ -16,7 +16,7 @@ public class TestBase4ParallelTesting{
 	protected ThreadLocal<RemoteWebDriver> driver=null;
 	@BeforeClass
 	@Parameters(value= {"browser"})
-	public void setup(String browser) throws MalformedURLException
+	public void setup(@Optional("chrome")String browser) throws MalformedURLException
 	{
 		driver=new ThreadLocal<RemoteWebDriver>();
 		DesiredCapabilities caps=new DesiredCapabilities();
