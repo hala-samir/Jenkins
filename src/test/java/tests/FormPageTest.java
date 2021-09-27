@@ -1,4 +1,4 @@
-package tests;
+/*package tests;
 import org.testng.annotations.Test;
 
 import pages.HomePage;
@@ -20,3 +20,4 @@ public class FormPageTest extends TestBase {
 	}
 
 }
+*/
